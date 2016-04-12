@@ -1,0 +1,307 @@
+.req {
+	color: red;	
+}
+/*custom font*/
+h5 {
+	padding: 13px 0px 5px;
+}
+/*basic reset*/
+* {
+margin: 0;
+padding: 0;
+}
+html {
+height: 100%;
+background-color: #000;
+}
+body {
+font-family: montserrat, arial, verdana;
+}
+/*form styles*/
+#msform {
+
+}
+#msform fieldset {
+background: #000;
+border: 1px solid #D8DB43;
+border-radius: 3px;
+box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+padding: 20px 30px;
+box-sizing: border-box;
+
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+display: none;
+}
+/*inputs*/
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:   #000;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:   #000;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #000;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #000;
+}
+#msform input, #msform textarea {
+padding: 15px;
+border: 1px solid #ccc;
+border-radius: 3px;
+margin-bottom: 10px;
+width: 100%;
+box-sizing: border-box;
+font-family: montserrat;
+/*color: #2C3E50;*/
+color:#D8DB43 !important;
+font-size: 13px;
+}
+h5 {
+	color: #D8DB43;
+}
+#msform input[type='text'], #msform textarea{
+	color: #000 !important;
+}
+/*buttons*/
+#msform .action-button {
+	width: 130px;
+	background: #C7A500 !important;
+	font-weight: bold;
+	color: #fff !important;
+	/*color: white;*/
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+box-shadow: 0 0 0 2px white, 0 0 0 3px #BEAA4B;
+}
+h3
+{
+	margin:10px 0px;
+}
+/*headings*/
+.fs-title {
+font-size: 20px;
+text-transform: uppercase;
+color:#D8DB43;
+/*color: #2C3E50;*/
+margin-bottom: 10px;
+font-weight:bold;
+}
+.fs-subtitle {
+font-weight: normal;
+font-size: 13px;
+color:#D8DB43;
+/*color: #666;*/
+margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+margin-bottom: 00px;
+overflow: hidden;
+/*CSS counters to number the steps*/
+counter-reset: step;
+width:80%;
+margin:20px auto;
+}
+#progressbar li {
+list-style-type: none;
+color:#D8DB43;
+/*color: rgb(13, 26, 155);*/
+text-transform: uppercase;
+font-size: 9px;
+width: 20%;/*33.33%;*/
+float: left;
+position: relative;
+text-align:center;
+text-indent:-9999px;
+color:transparent;
+}
+#progressbar li:before {
+content: counter(step);
+counter-increment: step;
+width: 20px;
+line-height: 20px;
+display: block;
+font-size: 10px;
+color:#D8DB43;
+/*color: #333;*/
+background: rgb(218, 226, 95);
+border-radius: 3px;
+margin: 0 auto 5px auto;
+text-indent:initial;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+content: '';
+width: 100%;
+height: 2px;
+background: rgb(218, 226, 95);
+position: absolute;
+left: -50%;
+top: 9px;
+z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+/*connector not needed before the first step*/
+content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+background: #27AE60;
+/*color: white;*/
+color:#D8DB43;
+}
+#left-fields {
+width: 43%;
+margin: 0 5%;
+float: left;
+overflow:hidden;
+}
+#two-third-fields {
+width: 60%;
+margin: 0 5%;
+float: left;
+overflow:hidden;
+}
+#one-third-fields {
+width: 30%;
+float: left;
+text-align:center;
+overflow:hidden;
+}
+#two2-third-fields {
+width: 55%;
+margin: 0 5%;
+float: left;
+overflow:hidden;
+}
+#one2-third-fields {
+width: 35%;
+float: left;
+text-align:center;
+overflow:hidden;
+}
+#right-fields {
+width: 44%;
+float: left;
+overflow:hidden;
+}
+#next-button{
+text-align: center;
+width: 100%;
+float: left;
+overflow:hidden;
+}
+#step-title{
+text-align: center;
+width: 100%;
+float: left;
+overflow:hidden;
+margin-top:30px;
+}
+.content_field label
+{
+	float:left;
+	width:40%;
+	margin-right:20px;
+	text-align:right;
+}
+
+.field_right
+{
+	float:left;
+	width:50% !important;
+	text-align:left;
+}
+.item-field
+{
+	clear:both;
+	width:100%;
+	float:left;
+	text-align:left;
+	margin-bottom:5px;
+	min-height:30px;
+}
+.field_inline
+{
+	display:inline-block;
+	margin:5px 5px 5px 10px !important;
+	width:auto !important;
+}
+.item-field label
+{
+	float:left;
+	width:20%;
+	margin-right:20px;
+	text-align:left;
+
+}
+.text_input
+{
+	padding:5px !important;
+	margin-bottom:0px !important;
+}
+.radio_space
+{
+	margin:5px 5px 5px 40px !important;
+}
+.col_left
+{
+	width:50%;
+	float:left;
+}
+.col_right
+{
+	width:48%;
+	float:right;
+	margin-left:2%;
+}
+.col-md-7
+{
+	float:left;
+	width:65%;
+}
+.col-md-3
+{
+	float:left;
+	width:32.3%;
+}
+.col-md-2
+{
+	float:left;
+	width:24%;
+}
+.col-md-space
+{
+	margin-right:0.9%;
+}
+.col-md-10
+{
+	float:left; width:100%;
+}
+.col-md-6
+{
+	float:left;
+	width:60%;
+}
+.col-md-4
+{
+	float:left;
+	width:39%;
+}
+#medical_race_other_text, #medical_ethnicity_other_text, #medical_prefer_language_other_text
+{
+	padding:10px !important;
+}
+
+

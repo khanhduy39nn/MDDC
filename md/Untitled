@@ -1,0 +1,55 @@
+index.php
+
+
+if(!isset($_GET['id'])){
+  if(isset($_SESSION['detail']['id']))
+  {
+    echo '<script>';
+    echo 'location.href = "'.working_domain.'?id='.$_SESSION['detail']['id'].'";';
+    echo '</script>';
+  }
+  else{
+    echo '<script>';
+    echo 'location.href = "http://milliondollardesiclub.com/login.php";';
+    echo '</script>';
+  }
+}
+
+
+
+update trang thai notifi thanh 2
+nho kiem tra trang thai 1 thi them class new-notif vao the a
+script
+function updateStatusNotif(notif_id){
+  $.post("functions.php",
+  {
+     updateStatusNotif1: "yes",
+     notif_id:notif_id
+  },
+   function(data, status){
+     console.log(status);
+  });
+}
+
+function
+//accept add friend request;
+if(isset($_POST['acceptFriendRequest1'])&&$_POST['acceptFriendRequest1']=='yes'){
+  include "md-config.php";
+
+  echo $result=acceptRequestFriend($_POST['userRequest'],$_POST['userRecieve']);
+  if($result)
+    updateNotificationStatus($_POST['notif_id'],2);
+
+}
+
+
+
+style
+
+#nav li a {
+    color: #63651A;
+    text-decoration: none;
+}
+.new-notif{
+    color: #D8DB43;
+}

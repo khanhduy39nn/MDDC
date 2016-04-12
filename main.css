@@ -1,0 +1,137 @@
+/*
+controls the look and feel of the 'pixels-sold/available' box:
+*/
+*:focus {
+    outline: 0;
+}
+input, select {
+border-color:black;
+}
+.status {	
+		width:134px;
+		height:43;
+		border:0;
+		padding: 6px 8px;
+		background: url(s_bg.gif) no-repeat #D7D7D7;
+		font-size: 12px;
+		font-family: Arial;
+		text-align:left;
+		line-height:16px;
+	}
+
+.status_body {
+
+	margin:0px; 
+	background-color: #D7D7D7;
+
+}
+/*
+Table cells (inside tables)
+*/
+	TD {
+
+		font-size: 12px;
+
+
+	}
+/*
+Heading bar
+*/
+.heading_bar {
+	background: #0C0708;
+	color: #D8DB43;
+	font-weight: bold;
+	text-align: left;
+	}
+/*
+Menu bar (section at the top where the navigational links are placed)
+*/
+	.menu_bar  {
+	font-family:'Arial Black', Helvetica;
+	color: #D8E378;
+	font-weight: bold;
+	text-align: left;
+	font-size: 14px;
+	padding: 3px;
+	border-color: #D8E378;
+	border-radius: 12px;
+	
+	}
+/*
+Links in the menu bar
+*/
+	A.menu_bar {
+	color: #D8DB43;
+	text-decoration: none;
+	display: inline-block;
+	}
+	
+	
+	
+	A.menu_bar:hover {
+		color: #a7b625;
+	}
+	a:active {
+		color: #a7b625;
+	}
+	
+	.social {
+    	margin-left:2px;
+    	margin-right:2px;
+    	margin-top:10px;
+	}
+	#form-search {
+	  width: 218px;
+      display: block;
+      float: right;
+      margin-right: 250px;
+	}
+	.btn-search {
+	   width: 35px;
+	   background-image: url('images/ico-search.png');
+	   background-repeat: no-repeat;
+	   background-color: transparent;
+	   border:0px solid white;
+	}
+	.btn-search:focus {outline:0;}
+	::-webkit-input-placeholder {
+   color: black;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: black;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: black;  
+}
+
+:-ms-input-placeholder {  
+   color: black;  
+}
+
+@media screen and (max-width: 1000px) { 
+	$search {
+		margin-left:5px;
+	}
+	#search, #stats {
+		padding-top:10px !important;		
+	}	
+}
+@media screen and (max-width: 800px) {
+	#search {
+		width:98% !important;		
+		padding-left:0px !important;	
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center;
+		margin-left:5px !important;
+	}	
+	
+}
+@media screen and (max-width: 400px) {
+	#search {		
+		text-align:left;		
+	}	
+	
+}

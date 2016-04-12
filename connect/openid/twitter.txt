@@ -1,0 +1,27 @@
+Consumer Key (API Key)	dVjoyJFxDcsqEjUMnWTD8Gdnh
+Consumer Secret (API Secret)	EqOb4TOczMNky3JkBZZluNQJJ3TQGS5ByM1pbgNJTdpUTn31Jd
+Access Level	Read and write (modify app permissions)
+Owner	MddcTw
+Owner ID	4536094152
+
+
+  echo '<pre>';
+  var_dump($twitter_data);
+  echo '</pre>';
+
+
+google app, twiter, yahoo
+mddcapp
+KSPUNHZSCPRC86EY
+
+facebook, linkedin
+mddcapp@gmail.com
+KSPUNHZSCPRC86EY
+
+
+
+https://fabric.io/
+mddcapp
+KSPUNHZSCPRC86EY
+
+for twitter app call back http://milliondollardesiclub.com/openid/?serviceid=1

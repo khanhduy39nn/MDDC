@@ -1,0 +1,6 @@
+RewriteEngine On
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^job/(.+)-([0-9]+)$  jobs/detail_job.php?id=$2 [L]
+RewriteRule ^candidate/(.+)-([0-9]+)$  jobs/detail_candidate.php?id=$2 [L]
+

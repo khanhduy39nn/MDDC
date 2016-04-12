@@ -1,0 +1,450 @@
+*:focus {
+    outline: 0;
+}
+input,select {
+border-color:black;
+}
+.content-million {
+	border-color: #CDCA64 !important;
+	background-color: #000 !important;
+	color: #CDCA64 !important;	
+}
+
+.free {
+
+		height: 10px; 
+		width: 10px;
+		border:1px solid #DFDFDF;
+}
+
+A.big_link {
+
+
+    font-size: 20px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #6699cc;
+
+
+}
+
+.big_button {
+
+	font-size:18px;
+}
+
+.sold {
+		height: 10px; 
+		width: 10px;
+}
+.selected {
+		height: 10px; 
+		width: 10px;
+		border:2px solid #33CC00;
+		background-color: #D8E378FFF ;
+}
+
+.reserved {
+		height: 10px; 
+		width: 10px;
+}
+a.menu_bar {
+
+	color: #D8DB43 !important;
+	font-family: 'Arial Black', Helvetica;
+	font-size: 14px;
+	font-weight: Bold; 
+	text-decoration:none;
+}
+a.menu_bar:hover {
+	color: #A7A512 !important;
+}
+
+.menu_bar {
+	margin: 0px;
+	padding: 6px;
+	background-color:#000; 
+	color: #D8DB43;
+	
+}
+
+BODY {	
+	color: #D8DB43;
+	//background-image : url(bg_gradient.jpg);	
+	margin: 0px;
+	font-size :  13px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	background-color: #000;
+}
+
+H1 {
+	font-size: 20px; 
+	font-family: Verdana, Arial, Helvetica;
+	font-weight: bold;
+	line-height: 26px;
+	color: #D8DB43;
+}
+
+H2 {
+	font-size : 16px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	line-height : 18px;
+	color: #D8DB43
+}
+
+H3 {
+	font-size : 14px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	line-height : 14px;
+	color: #D8DB43
+}
+
+P {
+	font-size :  13px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #D8DB43
+}
+
+TABLE, TR, TD {
+	font-size :  13px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #D8DB43;
+	background-color: #000;
+	
+}
+TABLE {
+border-spacing: 0px !important;
+}
+TD {
+	border:0px solid #D8E378;
+}
+
+FORM {
+	margin-bottom : 0px;
+	margin-left : 0px;
+	margin-right : 0px;
+	margin-top : 0px;
+}
+
+SELECT  {
+	font-size :  11px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #D8DB43;
+}
+
+INPUT {
+    font-size :  11px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #000;
+}
+
+TEXTAREA {
+	height: 230px;
+	width:660px;	
+	font-size :  11px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #D8DB43;
+}
+
+A {
+    font-size: 14px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #6699cc !important;
+}
+
+.fancy_heading {
+	border-style: solid; 
+	border-color:#D8DB43; 
+	border-width:1; 
+	padding: 3;
+	font-size: 14px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background-color: #000;
+}
+
+
+/*
+############################################################
+Dynamic forms
+This set of styles control the display of dynamic forms - (Ad form).
+
+*/
+
+#dynamic_form, TABLE.dynamic_form {
+	background-color: #d9d9d9;
+	
+	width: 100%;
+	border-bottom-width: 0px;
+
+}
+/*
+TD.dynamic_form_field -
+The name of the field (field label which on the left side)
+*/
+#dynamic_form TD.dynamic_form_field {
+	background-color: #efefef;
+	font-weight: bold;
+	width: 120px;
+	font-family: Arial;
+	font-size: 12px;
+
+}
+
+#dynamic_form TD.dynamic_form_2_col_field {
+	background-color: #D8E378fff;
+	
+
+}
+/*
+#dynamic_form TD.dynamic_form_value
+The value of the field (on the right from the field label)
+*/
+#dynamic_form TD.dynamic_form_value {
+	background-color: #D8E378fff;
+	
+}
+
+/*
+
+*/
+#dynamic_form .dynamic_form_image_label {
+	
+	font-weight: bold;
+
+	font-family: Arial;
+	font-size: 12px;
+
+}
+
+/*
+
+*/
+#dynamic_form .dynamic_form_file_label {
+
+	font-weight: bold;
+	
+
+}
+/*
+The following style controls the LABEL type fields
+*/
+#dynamic_form .dynamic_form_note_label {
+
+
+}
+
+/*
+Date field 
+*/
+#dynamic_form SELECT.dynamic_form_date_style {
+	background-color: #D8E378fff;
+	
+}
+#dynamic_form INPUT.dynamic_form_date_style {
+	background-color: #D8E378fff;
+	
+}
+/* Other fields */
+#dynamic_form INPUT.dynamic_form_checkbox_style {
+	background-color: #D8E378fff;
+	
+
+}
+
+#dynamic_form INPUT.dynamic_form_radio_style {
+	background-color: #D8E378fff;
+	color: #D8E378fff;
+	
+
+}
+#dynamic_form INPUT.dynamic_form_text_style{
+	background-color: #D8E378fff;
+	
+
+}
+#dynamic_form TEXTAREA {
+	background-color: #D8E378fff;
+	
+
+}
+#dynamic_form SELECT {
+	background-color: #D8E378fff;
+	
+
+}
+
+
+/* 
+###########################################################
+Ads :
+This style is for the table that displays an ads form.
+HTML code is located in ads.inc.php
+*/
+
+TABLE.ad_data {
+
+	background-color: #D8E378fff;
+	
+	border-width: 0px;
+
+
+}
+
+
+/********************/
+
+.error_msg_label {
+	color: #FF0000;
+	font-weight: bold;
+
+
+}
+
+.ok_msg_label {
+	border-style: solid; 
+	border-color: #33CC00; 
+	border-width:2px;
+	
+
+}
+
+/*****************************/
+
+/*
+####################################################
+Ads list
+
+*/
+
+#adslist, TABLE.adslist {
+	  background-color: #d9d9d9 !important;	
+	
+}
+
+
+#adslist TD.list_data_cell {
+	font-family: "Arial", sans-serif;
+	font-size: 10pt;
+	color: #CBC35F !important;
+	
+	
+}
+
+#adslist .today {
+	color: #ff0000;
+	font-weight: bold;
+
+}
+
+#adslist .days_ago {
+	color: #339900;
+	font-weight: bold;
+}
+
+#adslist .days_ago2 {
+	color: #C0C0C0;
+	font-weight: bold;
+}
+
+
+#adslist .list_header_cell  {
+
+	font-size: 10pt;
+	margin: 0px;
+	padding: 3px;
+	font-weight: bold;
+
+}
+.form_submit_button {
+	color: #000;
+}
+.social {
+    margin-right:2px;
+    margin-left:2px;
+    margin-top:10px;
+}
+
+font {
+    color:#CBC35F;
+}
+#form-search {
+  width: 218px;
+  display: block;
+  float: right;
+  margin-right: 252px;
+}
+.btn-search {
+   width: 35px;
+   background-image: url('../images/ico-search.png');
+   background-repeat: no-repeat;
+   background-color: transparent;
+   border:0px solid white;
+}
+.btn-search:focus {outline:0;}
+
+::-webkit-input-placeholder {
+   color: black;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: black;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: black;  
+}
+
+:-ms-input-placeholder {  
+   color: black;  
+}
+/* 28.08.15 */
+.section_footer
+{
+	margin-top:100px;
+}
+.section_footer a
+{
+	color:#D8DB43 !important;
+}
+.menu_bar
+{
+	margin-top:30px;
+}
+#logo {
+	display:block;
+	float:left;
+}
+@media screen and (max-width: 1000px) {
+	#search {
+		width:500px !important;		
+		padding-left:0px !important;		
+	}
+	
+}
+@media screen and (max-width: 800px) {
+	#search {
+		width:100% !important;		
+		padding-left:0px !important;		
+	}
+	#form_contact {
+		width:100% !important;
+	}
+}
+@media screen and (max-width: 500px) {
+	#form_contact input[type=text] {
+		width:100% !important;
+	}
+	.content-million img {
+		width:100% !important;
+	}
+}
