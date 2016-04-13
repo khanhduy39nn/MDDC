@@ -45,7 +45,7 @@ function getNotificationWithType($userId,$type){
   {
     $query="select notifications.id AS notif_id, name, register.id AS user_id, status,link  from notifications,register where notifications.user_id=$userId and notifications.sender_id=register.id and type=$type and status!=0 and status!=3 order by notifications.id desc limit 0,10";
   }
-return  mysql_query($query);
+  return  mysql_query($query);
 }
 
 

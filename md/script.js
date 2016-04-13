@@ -83,10 +83,6 @@ $( document ).ready(function() {
   });
 
 
-
-
-
-
 //click addfriend button
   $(".addfriend-btn").click(function (event){
     event.preventDefault();
@@ -309,27 +305,36 @@ function PostComment(status_id,filename){
 
   count=3;
   start=3;
+  loading="false";
   $(window).scroll(function(){
+    if(loading=="false"){
+
       a=$( document ).height()-$(window).height();
-      b=Math.round($(window).scrollTop()-1);
-      c=Math.round($(window).scrollTop()+1);
+      b=Math.round($(window).scrollTop());
+      c=Math.round($(window).scrollTop());
+      console.log("a="+a);
+      console.log("b="+b);
+      console.log("c="+c);
+      if(a==b || a==c){
+        console.log("loading");
+        loading="true";
+         $(".loadimg").show();
+        if($("#indexpage").val()=="true")
+          $.post('loadpost.php',
+            {
+              user_id:$("#user_id").val(),
+              logged:$("#userlogged").val(),
+              start:start,
+              count:count
 
-    if(a==b || a==c){
-
-      if($("#indexpage").val()=="true")
-        $.post('loadpost.php',
-          {
-            user_id:$("#user_id").val(),
-            logged:$("#userlogged").val(),
-            start:start,
-            count:count
-
-          }, function(data){
-            $('.time-line').append(data);
-            start=start+count;
-          //  alert(start);
-          //  $(".loadimg").hide();
-          }
-        )
+            }, function(data){
+              $('.time-line').append(data);
+                start=start+count;
+                loading="false";
+            //  alert(start);
+             $(".loadimg").hide();
+            }
+          )
+      }
     }
   });

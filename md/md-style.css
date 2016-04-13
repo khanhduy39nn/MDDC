@@ -178,7 +178,7 @@ padding: 15px;
   border-bottom: none;
   border-left: none;
   border-right: none;
-  padding-left: 5px
+  padding: 0px 0px 0px 5px;
 }
 .btn{
   background: #D8DB43;
@@ -469,6 +469,7 @@ float: left;
   color: #D8DB43;
   margin-bottom: 10px;
 }
+
 .md-search{
   background: #7B7B7B;
   border:none;
@@ -509,11 +510,12 @@ float: left;
 }
 .upload-cmt{
   top:0px;
-  right:0px;
+  right:9px;
   position: absolute;
   padding-top: 8px;
   color: #CECECE;
 }
+
 .upload-cmt i{
   cursor: pointer;
 }

@@ -7,8 +7,8 @@ $count=$_POST['count'];
 $user_id=$_POST['user_id'];
 $logged=$_POST['logged'];
 $max=$start+$count-1;
-$sql="select * from status where user_id=$user_id ORDER BY id desc limit $max,$start";
-echo $sql;
+$sql="select * from status where user_id=$user_id ORDER BY id desc limit $start,$count";
+//echo $sql;
 $query=mysql_query($sql);
 ?>
 <?php
@@ -84,7 +84,7 @@ $query=mysql_query($sql);
               <input name="input-comment" id="input-comment-<?php echo $row['id']; ?>" class="input-comment" />
               <div class="upload-cmt">
                 <input type="file" name="img-cmnt" id="img-cmnt-<?php echo $row['id']; ?>" statusid="<?php echo $row['id']; ?>" accept="image/*" class="inputfile inputfile-5" data-multiple-caption="{count} files selected" />
-                <label for="img-cmnt-<?php echo $row['id']; ?>"><img src="img/upload.png" /> <span></span></label>
+                <label for="img-cmnt-<?php echo $row['id']; ?>"><i class="fa fa-upload" aria-hidden="true"></i> <span></span></label>
               </div>
             </div>
 

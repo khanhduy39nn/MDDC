@@ -149,7 +149,7 @@ $notif=getNotification($_SESSION['detail']['id']);
         </div>
         <div class="clear"></div>
       </div>
-      
+
       <div class="status-box emoticons">
           <div class="content-status-box">
             <div class="title-post-permarklink">
@@ -201,14 +201,29 @@ $notif=getNotification($_SESSION['detail']['id']);
             if($logged):
           ?>
           <div class="input-comment-box">
-            <input name="input-comment" id="input-comment-<?php echo $_GET['post']; ?>" class="input-comment" />
-            <a href="javascript:void(0)" class="send-comment-btn btn" onclick=sendComment("<?php echo $_GET['post']; ?>") > Send </a>
-            <div class="spinner" id="spinner-<?php echo $_GET['post']; ?>">
-              <div class="spinner__item1"></div>
-              <div class="spinner__item2"></div>
-              <div class="spinner__item3"></div>
-              <div class="spinner__item4"></div>
-            </div>
+            <form  id="input-comment-form-<?php echo  $_GET['post']; ?>">
+              <div class="input-cmnt-wrap">
+                <input name="input-comment" id="input-comment-<?php echo  $_GET['post']; ?>" class="input-comment" />
+                <div class="upload-cmt">
+                  <input type="file" name="img-cmnt" id="img-cmnt-<?php echo  $_GET['post']; ?>" statusid="<?php echo  $_GET['post']; ?>" accept="image/*" class="inputfile inputfile-5" data-multiple-caption="{count} files selected" />
+                  <label for="img-cmnt-<?php echo  $_GET['post']; ?>"><i class="fa fa-upload" aria-hidden="true"></i> <span></span></label>
+                </div>
+              </div>
+
+              <a href="javascript:void(0)" class="send-comment-btn btn" onclick=sendComment("<?php echo $_GET['post'] ?>") > Send </a>
+              <div class="clearfix"></div>
+              <div class="filename">
+                <p id="filename2-<?php echo  $_GET['post'] ?>" class="filename2"></p>
+              </div>
+              <div class="spinner" id="spinner-<?php echo  $_GET['post'] ?>">
+                <div class="spinner__item1"></div>
+                <div class="spinner__item2"></div>
+                <div class="spinner__item3"></div>
+                <div class="spinner__item4"></div>
+              </div>
+              <div class="clearfix"></div>
+            </form>
+
           </div>
 
         <?php endif; ?>
