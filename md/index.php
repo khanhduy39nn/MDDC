@@ -67,7 +67,7 @@ $sql=mysql_query($sql);
 include_once "header.php";
 $notif=getNotification($_SESSION['detail']['id']);
 ?>
-<script src="script.js"></script>
+<!---script src="script.js"></script-->
   <div style="display:block; float:right; top:5px;right:5px; position:absolute;">
   	<div class="menu_bar" style="margin-top:5px !important;" >
 			<?php include 'notif.php'; ?>

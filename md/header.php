@@ -16,7 +16,7 @@
 <link href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-<script type="text/javascript" src="jquery.emotions.js"></script>
+<link rel="stylesheet" href="../css/fb.css">
 
 
 </head>

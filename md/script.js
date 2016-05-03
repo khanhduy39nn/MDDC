@@ -49,7 +49,7 @@ $( document ).ready(function() {
           user_id: $("#userloggedid").val()
       },
       function(data, status){
-        console.log(data);
+        //console.log(data);
         switch (type) {
           case 1:
               $('.notificationContainer_friend .notificationsBody').empty();
@@ -99,7 +99,7 @@ $( document ).ready(function() {
       },
       function(data, status){
         $(".addfriend-btn").val("Friend request send");
-          console.log(data);
+        //  console.log(data);
             location.reload();
       });
   });
@@ -122,7 +122,7 @@ $( document ).ready(function() {
         function(data, status){
           location.reload();
 
-          console.log(data);
+          //console.log(data);
         });
     });
   $(function(){
@@ -132,7 +132,7 @@ $( document ).ready(function() {
         // $("#hidden-div").show();
      });
   });
-   //$(".emoticons").emotions();
+  //	$(".emoticons").emotions();
 });
 
 
@@ -171,7 +171,7 @@ function rejectRequest(userRequest,notif_id){
     notif_id:notif_id
   },
   function(data, status){
-    console.log(status);
+    //console.log(status);
   });
 }
 
@@ -229,7 +229,7 @@ function viewmorcomment (status_id){
       function(data, status){
           //alert("Data: " + data + "\nStatus: " + status);
         //  $("#spinner-"+status_id).hide();
-          console.log(data);
+      //    console.log(data);
       /*    if(data!=false){
             $("#input-comment-"+status_id).val("");
             $("#comment-box-"+status_id).append(data)
@@ -294,7 +294,7 @@ function PostComment(status_id,filename){
     function(data, status){
         //alert("Data: " + data + "\nStatus: " + status);
         $("#spinner-"+status_id).hide();
-        console.log(data);
+      //  console.log(data);
         if(data!=false){
           $("#input-comment-"+status_id).val("");
           $("#comment-box-"+status_id).append(data)
@@ -312,11 +312,7 @@ function PostComment(status_id,filename){
       a=$( document ).height()-$(window).height();
       b=Math.round($(window).scrollTop());
       c=Math.round($(window).scrollTop());
-      console.log("a="+a);
-      console.log("b="+b);
-      console.log("c="+c);
       if(a==b || a==c){
-        console.log("loading");
         loading="true";
          $(".loadimg").show();
         if($("#indexpage").val()=="true")
