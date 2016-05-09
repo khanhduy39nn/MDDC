@@ -75,7 +75,23 @@ $( document ).ready(function() {
       });
   }
 
+  $(document).on("click",".like",function()
+  {
 
+    var statusid=$(this).attr("status-id");
+    $.post("functions.php",
+      {
+        like1: "yes",
+        userloggedid: $("#userloggedid").val(),
+        status_id:statusid
+      },
+      function(data, status){
+        console.log(data+"," +status);
+        $("#like-"+statusid).text(data);
+
+    });
+    return false;
+  });
   //Document Click
   $(document).click(function()
   {

@@ -146,7 +146,7 @@ border: none;
   margin-bottom: 13px;
 }
 .comment-box{
-  padding:15px;
+  padding:0px 15px 15px 15px;
   border-top: 1px solid #494950;
 }
 .comment-box .view-more-commtents{
@@ -541,4 +541,12 @@ float: left;
 
 #filename2-234x{
   padding-top: 11px;
+}
+.like-names{
+  padding: 8px;
+  border-bottom: 1px solid #494950;
+      margin-bottom: 15px;
+}
+.like-text{
+      color: #AFB14A;
 }

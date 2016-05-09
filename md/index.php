@@ -72,7 +72,7 @@ $notif=getNotification($_SESSION['detail']['id']);
   	<div class="menu_bar" style="margin-top:5px !important;" >
 			<?php include 'notif.php'; ?>
   	<?php if(isset($_SESSION['login_register']) && $_SESSION['login_register'] == 'yes'){ ?>
-  	 <a class='menu_bar' href="http://milliondollardesiclub.com/md/?id=<?php echo $_SESSION['detail']['id']; ?>" style="color:#D8DB43; cursor:default;text-transform: uppercase;" >Hello <?php echo $_SESSION['detail']['name']; ?>,</a><a href='../logout.php' class='menu_bar'>LOG OUT</a>
+  	 <a class='menu_bar' href="http://milliondollardesiclub.com/md/?id=<?php echo $_SESSION['detail']['id']; ?>" style="color:#D8DB43;text-transform: uppercase;" >Hello <?php echo $_SESSION['detail']['name']; ?>,</a><a href='../logout.php' class='menu_bar'>LOG OUT</a>
   	<?php }else{ ?>
   	 <a href='../login.php' class='menu_bar'>LOG IN</a>
   	| <a href='../register/register.php' class='menu_bar'>REGISTER</a>
@@ -158,7 +158,7 @@ $notif=getNotification($_SESSION['detail']['id']);
               <a href="<?php echo working_domain.'?id='.$user_id; ?>">Timeline</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="http://milliondollardesiclub.com/profile/?id=<?php echo $user_id; ?>">About</a>
             </li>
             <li>
               <a href="<?php echo working_domain.'friends.php?id='.$user_id; ?>">Friends</a>
@@ -194,7 +194,6 @@ $notif=getNotification($_SESSION['detail']['id']);
           $year= date("j F, Y", strtotime($datetime[0]));
           $hours= date("H:i", strtotime($datetime[1]));
     ?>
-
         <div class="status-box emoticons">
             <div class="content-status-box">
 
@@ -204,12 +203,21 @@ $notif=getNotification($_SESSION['detail']['id']);
 
               </p>
               <?php
-                  if($row['image']!='')
-                  {
+                  if($row['image']!=''){
                     echo '<img class="status-image-post" src="'.working_domain.'../upload_files/images/'.$row['image'].'"/>';
                   }
                ?>
               <div class="social-tool">
+                <?php
+
+                $likeList= getLikeList($row['id']);
+                $countLikeList=mysql_num_rows($likeList);
+                if($countLikeList==0):
+                ?>
+                  <a class="like like-text" id="like-<?php echo $row['id']; ?>" href="#" status-id="<?php echo $row['id']; ?>" >Like</a>
+                <?php else: ?>
+                  <a class="like like-text" id="like-<?php echo $row['id']; ?>" href="#" status-id="<?php echo $row['id']; ?>" >Unlike)</a>
+                <?php endif; ?>
                 <div class="social-share">
                   <ul>
                       <li>
@@ -220,9 +228,44 @@ $notif=getNotification($_SESSION['detail']['id']);
                       </li>
                   </ul>
                 </div>
+
               </div>
+
             </div>
             <div class="comment-box" id="comment-box-<?php echo $row['id']; ?>">
+              <?php if($countLikeList>0):?>
+
+                <div class="like-names">
+                  <a href="javascript:void(0)" class="like-text">
+                    <?php
+                      $str="";
+                      if($countLikeList>3)
+                      {
+                        $i=1;
+
+                        while ($like =  mysql_fetch_array($likeList)):
+                            $str.= $like['name'].', ';
+                            $i++;
+                            if($i==3)
+                              break;
+                        endwhile;
+                          $str=substr($str,0,-2);
+                        $str.= ' and '. ($countLikeList-3) . " others like this post";
+
+                      }else{
+                        while ($like =  mysql_fetch_array($likeList)):
+                          $str .= $like['name'] .', ' ;
+
+                        endwhile;
+                        $str=substr($str,0,-2);
+                      }
+
+                      echo $str;
+                    ?>
+                  </a>
+                </div>
+
+              <?php endif; ?>
               <div class="clear"></div>
               <?php
                   $showCmt=false;

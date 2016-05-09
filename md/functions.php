@@ -126,8 +126,25 @@ function getNotificationList($userId){
   return mysql_query($query);
 }
 
+function likex($status_id,$userId){
+  $likelist=getLikeList($status_id);
+  $countLikeList=mysql_num_rows($likelist);
+  if($countLikeList==0)
+    $query="INSERT INTO like_post (status_id,user_id) value($status_id, $userId)";
+  else
+    $query="delete from like_post where status_id=$status_id and user_id= $userId";
+    mysql_query($query);
+    $likelist=getLikeList($status_id);
+    $countLikeList=mysql_num_rows($likelist);
+    if($countLikeList>0)
+      echo  "Like(".$countLikeList.")";
+    else echo "Like";
 
-
+}
+function getLikeList($status_id){
+  $query="select name FROM like_post AS lp, register AS reg WHERE lp.user_id = reg.id AND lp.status_id =$status_id";
+  return mysql_query($query);
+}
 //post status;
 if(isset($_POST['postStatus1'])&&$_POST['postStatus1']=='yes'){
   include "md-config.php";
@@ -246,6 +263,16 @@ if(isset($_POST['updateStatusNotif1'])&&$_POST['updateStatusNotif1']=='yes'){
 if(isset($_POST['unfriend1'])&&$_POST['unfriend1']=='yes'){
   include "md-config.php";
   unFriend($_POST['friendid'],$_POST['userloggedid']);
+}
+
+
+//addfriend;
+if(isset($_POST['like1'])&&$_POST['like1']=='yes'){
+  include "md-config.php";
+//  $notif_id=like($_POST['status_id'],$_POST['userloggedid']);
+  likex($_POST['status_id'],$_POST['userloggedid']);
+
+
 }
 
 
