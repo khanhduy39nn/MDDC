@@ -199,9 +199,7 @@ function viewmorcomment (status_id){
 
 
   //post status
-  $( "#post-status-form" ).submit(function( event ) {
-
-      alert("sdf");
+  $( "#post-status-form" ).submit(function( event ) {     
       event.preventDefault();
       var formData = new FormData($("#post-status-form")[0]);
       var file = $('#file_234x')[0].files[0];
